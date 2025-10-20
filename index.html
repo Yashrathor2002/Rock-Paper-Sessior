@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Front Page -->
+    <div class="front-page visible" id="frontPage">
+      <h1 id="frontTitle">Rock Paper Scissors</h1>
+      <button class="start-btn" id="startBtn" onclick="startGame()">
+        Start Game
+      </button>
+    </div>
+
+    <!-- Game Page -->
+    <div class="game-page hidden" id="gamePage">
+      <h1 id="gameTitle">Rock Paper Scissors</h1>
+      <div class="choices">
+        <button class="choice" onclick="play('rock', this)">🪨 Rock</button>
+        <button class="choice" onclick="play('paper', this)">📄 Paper</button>
+        <button class="choice" onclick="play('scissors', this)">
+          ✂️ Scissors
+        </button>
+      </div>
+
+      <div class="user-choice" id="userChoice">Your Choice: -</div>
+      <div class="computer-choice" id="computerChoice">Computer Choice: -</div>
+      <div class="result" id="result">Make your move!</div>
+      <div class="score" id="score">You: 0 | Computer: 0</div>
+
+      <div class="game-buttons">
+        <button id="reset" onclick="resetGame()">Reset</button>
+        <button id="back" onclick="backToFront()">Back</button>
+      </div>
+    </div>
+
+    <!-- Sounds -->
+    <audio
+      id="winSound"
+      src="https://www.soundjay.com/button/sounds/button-4.mp3"
+    ></audio>
+    <audio
+      id="loseSound"
+      src="https://www.soundjay.com/button/sounds/button-10.mp3"
+    ></audio>
+    <audio
+      id="drawSound"
+      src="https://www.soundjay.com/button/sounds/button-16.mp3"
+    ></audio>
+
+    <!-- Confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
